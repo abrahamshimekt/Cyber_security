@@ -22,15 +22,15 @@ BIGNUM *e = BN_new();
 BIGNUM *n = BN_new();
 BIGNUM *dec = BN_new();
 BIGNUM *decnew = BN_new();
-// first find the hex value of M ="I owe you $2000 " using python -c 'print("I owe you $2000".encode("hex"))' command
+// first find the hex value of M ="Launch a missile " using python -c 'print("Launch a missile".encode("hex"))' command
 BN_hex2bn(&s, "643D6F34902D9C7EC90CB0B2BCA36C47FA37165C0005CAB026C0542CBDB6802F");
 BN_hex2bn(&snew, "643D6F34902D9C7EC90CB0B2BCA36C47FA37165C0005CAB026C0542CBDB6803F");
 BN_hex2bn(&e,"010001");
 BN_hex2bn(&n,"AE1CD4DC432798D933779FBD46C6E1247F0CF1233595113AA51B450F18116115");
 BN_mod_exp(decnew, s, e, n, ctx);
 BN_mod_exp(dec, snew, e, n, ctx);
-printBN("dec =",dec);
 printBN("newdec",decnew);
+printBN("dec =",dec);
 return 0;
 }
 

@@ -25,7 +25,7 @@ BIGNUM *encnew = BN_new();
 // first find the hex value of M ="I owe you $2000 " using python -c 'print("I owe you $2000".encode("hex"))' command
 BN_hex2bn(&M, "49206f776520796f752024323030302e");
 BN_hex2bn(&Mnew, "49206f776520796f752024333030302e");
-BN_hex2bn(&e,"010001");
+BN_hex2bn(&e,"74D806F9F3A62BAE331FFE3F0A68AFE35B3D2E4794148AACBC26AA381CD7D30D");
 BN_hex2bn(&n,"DCBFFE3E51F62E09CE7032E2677A78946A849DC4CDDE3A4D0CB81629242FB1A5");
 BN_mod_exp(enc, M, e, n, ctx);
 BN_mod_exp(encnew, Mnew, e, n, ctx);
